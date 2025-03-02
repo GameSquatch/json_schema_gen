@@ -1,0 +1,40 @@
+{
+  "name": "json_schema_gen",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "npx tsc",
+    "test": "npx mocha",
+    "buildTest": "npx tsc && npx mocha",
+    "prepublish": "npx tsc"
+  },
+  "keywords": [
+    "json_schema",
+    "generate",
+    "json",
+    "traverse"
+  ],
+  "author": "zsquatch <broncoscorpio@gmail.com>",
+  "license": "ISC",
+  "description": "Traverses a JSON-compliant JS object and generates a basic JSON Schema from it.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GameSquatch/json_schema_gen.git"
+  },
+  "dependencies": {
+    "json_traverse": "2.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.8",
+    "@types/chai": "^5.0.1",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0",
+    "typescript": "^5.7.3"
+  }
+}
