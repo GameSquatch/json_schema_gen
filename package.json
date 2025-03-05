@@ -27,7 +27,7 @@
     "url": "git+https://github.com/GameSquatch/json_schema_gen.git"
   },
   "dependencies": {
-    "json_traverse": "2.0.1"
+    "json_traverse": "2.0.2"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.8",
