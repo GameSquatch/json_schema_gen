@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { genSchema } from '../dist/index.js';
 
-
 const testObject = {
   field: 'value',
   innerObj: {
@@ -19,8 +18,22 @@ const testObject = {
 };
 
 describe('genSchema()', function () {
-  it('should ouput data', function () {
-    const data = JSON.stringify(genSchema(testObject));
-    expect(data).to.not.be.empty;
+  const data = genSchema(testObject);
+
+  it('should make root an object', function () {
+    expect(data.type).to.equal('object');
+    expect(data).to.haveOwnProperty('properties');
+  });
+
+  it('should make field a string', function () {
+    expect(data.properties.field.type).to.equal('string');
+  });
+
+  it('should handle nested arrays', function () {
+    expect(data.properties.arrInArr.items.items.contains).to.equal('string');
+  });
+
+  it('should handle objects in arrays', function () {
+    expect(data.properties.underObj.properties.oneMoreList.items.type).to.equal('object');
   });
 });
