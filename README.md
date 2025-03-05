@@ -1,6 +1,6 @@
 # JSON Schema Gen
 
-A very simplified generation of [2020-12 JSON Schemas](https://json-schema.org/) using an example JSON object to start with.
+A very simplified generation of [2020-12 JSON Schemas](https://json-schema.org/) using an example JSON object to start with. I hope to never have external dependencies; we'll see how that goes.
 
 ## Limitations (currently)
 

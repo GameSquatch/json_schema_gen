@@ -1,5 +1,5 @@
 {
-  "name": "json_schema_gen",
+  "name": "json-schema-create",
   "version": "1.0.0",
   "main": "dist/index.js",
   "type": "module",
